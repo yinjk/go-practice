@@ -9,9 +9,10 @@ import (
 	"strings"
 )
 
-var(
-	_topicId = "topic-test"
+var (
+	_topicId = "topic-test1"
 )
+
 func main() {
 	provider()
 }

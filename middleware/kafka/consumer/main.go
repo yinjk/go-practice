@@ -9,7 +9,7 @@ import (
 
 var (
 	wg       sync.WaitGroup
-	_topicId = "topic-test"
+	_topicId = "topic-test1"
 )
 
 func main() {
@@ -33,6 +33,7 @@ func consumeGroup() {
 	config := sarama.NewConfig()
 	// Init config, specify appropriate version
 	config.Consumer.Return.Errors = true
+	config.Consumer.Offsets.Initial = sarama.OffsetOldest
 	config.Version = sarama.V2_1_0_0
 	//consumerGroup, err := sarama.NewConsumerGroup([]string{"localhost:9092"}, "consumer-group-0", config)
 	//if err != nil {
