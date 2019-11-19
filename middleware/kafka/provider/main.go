@@ -59,9 +59,10 @@ func provider() {
 func autoProvider() {
 	sarama.Logger = log.New(os.Stdout, "[sarama] ", log.LstdFlags)
 	config := sarama.NewConfig()
-	config.Producer.Return.Successes = true
-	config.Producer.RequiredAcks = sarama.WaitForAll
+	config.Producer.Return.Successes = false
+	config.Producer.RequiredAcks = sarama.WaitForLocal
 	config.Producer.Partitioner = sarama.NewRandomPartitioner
+	config.ChannelBufferSize = 500000
 
 	producer, err := sarama.NewSyncProducer([]string{"localhost:9092"}, config)
 	if err != nil {
