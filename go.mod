@@ -7,7 +7,9 @@ require github.com/Shopify/sarama v1.23.1
 require (
 	github.com/elastic/go-elasticsearch/v7 v7.0.0-20190801065659-92cf325b6bfb
 	github.com/elastic/go-elasticsearch/v8 v8.0.0-20190731061900-ea052088db25
+	github.com/gopherjs/gopherjs v0.0.0-20200217142428-fce0ec30dd00 // indirect
 	github.com/hashicorp/go-uuid v1.0.1
+	github.com/jtolds/gls v4.20.0+incompatible
 	github.com/mailru/easyjson v0.7.0 // indirect
 	github.com/olivere/elastic v6.2.23+incompatible
 	github.com/pkg/errors v0.8.1 // indirect
